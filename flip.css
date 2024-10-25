@@ -1,0 +1,114 @@
+* {
+  justify-content: center;
+  justify-items: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{
+  background-color: purple;
+}
+.card{
+  border: 1px solid whitesmoke;
+  width: 600px;
+  height: 350px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+
+}
+.card:hover{
+  transform: rotate(-5deg);
+
+}
+.card:hover .outside{
+  transform: rotateY(-130deg);
+
+}
+.outside,
+.inside {
+  border: 1px solid black;
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  left: 50.1%;
+}
+.inside{
+  background: linear-gradient(
+    to right, white, whitesmoke 30%);
+    line-height: 3px;
+    padding: 0 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+}
+.outside{
+-webkit-transform-style: preserve 3d;
+transform-style: preserve-3d;
+z-index: 1;
+transform-origin: left;
+}
+.front,
+.back{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: rotateX(0deg);
+  background-color: white;
+}
+.front{
+  background-color: white;
+}
+.back{
+  transform: rotateY(180deg);
+background: linear-gradient(to left, #e0e0e0, #ffffff 30%);
+
+}
+.love{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.top-layer{
+  height: 80px;
+  width: 240px;
+  background-repeat: repeat;
+  background-size: 60px 100px;
+  background-position: 28px 0;
+  background-image: linear-gradient(
+    transparent 50px,
+    violet 50px,
+    violet 60px,
+    transparent 60px
+  );
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  margin: auto;
+}
+#object1{
+  width: 50px;
+  height: 50px;
+  object-fit: none;
+  object-position: 50px 30px;
+}
+.outside p{
+  font-size: 23px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 4px;
+  color: palevioletred;
+
+}
